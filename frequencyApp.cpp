@@ -11,11 +11,13 @@ using namespace std;
 
 struct frequencyTable{
 
-                char letter;
+                char letter , inputletter;
 
                 double frequency;
+                int inputfrequency;
+               
 
-} englishFrequency[25],ciphertextFrequency[1000];
+} englishFrequency[25];
 
 void addEnglishFrequencyTable();
 void makeCiphertextFrequencyTable(char ciphertext[1000]);
@@ -128,35 +130,35 @@ void addEnglishFrequencyTable(){
  
  
  
- ciphertextFrequency[0].letter = 'a';
- ciphertextFrequency[1].letter = 'b';
- ciphertextFrequency[2].letter = 'c';
- ciphertextFrequency[3].letter = 'd';
- ciphertextFrequency[4].letter = 'e';
- ciphertextFrequency[5].letter = 'f';
- ciphertextFrequency[6].letter = 'g';
- ciphertextFrequency[7].letter = 'h';
- ciphertextFrequency[8].letter = 'i';
- ciphertextFrequency[9].letter = 'j';
- ciphertextFrequency[10].letter = 'k';
- ciphertextFrequency[11].letter = 'l';
- ciphertextFrequency[12].letter = 'm';
- ciphertextFrequency[13].letter = 'n';
- ciphertextFrequency[14].letter = 'o';
- ciphertextFrequency[15].letter = 'p';
- ciphertextFrequency[16].letter = 'q';
- ciphertextFrequency[17].letter = 'r';
- ciphertextFrequency[18].letter = 's';
- ciphertextFrequency[19].letter = 't';
- ciphertextFrequency[20].letter = 'u';
- ciphertextFrequency[21].letter = 'v';
- ciphertextFrequency[22].letter = 'w';
- ciphertextFrequency[23].letter = 'x';
- ciphertextFrequency[24].letter = 'y';
- ciphertextFrequency[25].letter = 'z';	
+ englishFrequency[0].inputletter = 'a';
+ englishFrequency[1].inputletter = 'b';
+ englishFrequency[2].inputletter = 'c';
+ englishFrequency[3].inputletter = 'd';
+ englishFrequency[4].inputletter = 'e';
+ englishFrequency[5].inputletter = 'f';
+ englishFrequency[6].inputletter = 'g';
+ englishFrequency[7].inputletter = 'h';
+ englishFrequency[8].inputletter = 'i';
+ englishFrequency[9].inputletter = 'j';
+ englishFrequency[10].inputletter = 'k';
+ englishFrequency[11].inputletter = 'l';
+ englishFrequency[12].inputletter = 'm';
+ englishFrequency[13].inputletter = 'n';
+ englishFrequency[14].inputletter = 'o';
+ englishFrequency[15].inputletter = 'p';
+ englishFrequency[16].inputletter = 'q';
+ englishFrequency[17].inputletter = 'r';
+ englishFrequency[18].inputletter = 's';
+ englishFrequency[19].inputletter = 't';
+ englishFrequency[20].inputletter = 'u';
+ englishFrequency[21].inputletter = 'v';
+ englishFrequency[22].inputletter = 'w';
+ englishFrequency[23].inputletter = 'x';
+ englishFrequency[24].inputletter = 'y';
+ englishFrequency[25].inputletter = 'z';	
  
  for (int i =0 ; i<26; i++){
- 	ciphertextFrequency[i].frequency = 0;
+ 	englishFrequency[i].inputfrequency = 0;
  }
  
 }
@@ -170,83 +172,83 @@ void makeCiphertextFrequencyTable(char ciphertext[1000]){
 
 		
 	    if (ciphertext[i] == 'a'){
-			ciphertextFrequency[0].frequency++ ;
+			englishFrequency[0].inputfrequency++ ;
 		}
 		
 		else if (ciphertext[i] == 'b'){
-			ciphertextFrequency[1].frequency++ ;
+			englishFrequency[1].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'c'){
-			ciphertextFrequency[2].frequency++ ;
+			englishFrequency[2].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'd'){
-			ciphertextFrequency[3].frequency++ ;
+			englishFrequency[3].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'e'){
-			ciphertextFrequency[4].frequency++ ;
+			englishFrequency[4].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'f'){
-			ciphertextFrequency[5].frequency++ ;
+			englishFrequency[5].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'g'){
-			ciphertextFrequency[6].frequency++ ;
+			englishFrequency[6].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'h'){
-			ciphertextFrequency[7].frequency++ ;
+			englishFrequency[7].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'i'){
-			ciphertextFrequency[8].frequency++ ;
+			englishFrequency[8].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'j'){
-			ciphertextFrequency[9].frequency++ ;
+			englishFrequency[9].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'k'){
-			ciphertextFrequency[10].frequency++ ;
+			englishFrequency[10].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'l'){
-			ciphertextFrequency[11].frequency++ ;
+			englishFrequency[11].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'm'){
-			ciphertextFrequency[12].frequency++ ;
+			englishFrequency[12].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'n'){
-			ciphertextFrequency[13].frequency++ ;
+			englishFrequency[13].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'o'){
-			ciphertextFrequency[14].frequency++ ;
+			englishFrequency[14].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'p'){
-			ciphertextFrequency[15].frequency++ ;
+			englishFrequency[15].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'q'){
-			ciphertextFrequency[16].frequency++ ;
+			englishFrequency[16].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'r'){
-			ciphertextFrequency[17].frequency++ ;
+			englishFrequency[17].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 's'){
-			ciphertextFrequency[18].frequency++ ;
+			englishFrequency[18].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 't'){
-			ciphertextFrequency[19].frequency++ ;
+			englishFrequency[19].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'u'){
-			ciphertextFrequency[20].frequency++ ;
+			englishFrequency[20].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'v'){
-			ciphertextFrequency[21].frequency++ ;
+			englishFrequency[21].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'w'){
-			ciphertextFrequency[22].frequency++ ;
+			englishFrequency[22].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'x'){
-			ciphertextFrequency[23].frequency++ ;
+			englishFrequency[23].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'y'){
-			ciphertextFrequency[24].frequency++ ;
+			englishFrequency[24].inputfrequency++ ;
 		}
 		else if (ciphertext[i] == 'z'){
-			ciphertextFrequency[25].frequency++ ;
+			englishFrequency[25].inputfrequency++ ;
 		}}}
 	
 void sortCipherFrequency(){
@@ -254,7 +256,7 @@ void sortCipherFrequency(){
 	
 	
 for( int i =0 ; i<26 ; i++){
-cout<<ciphertextFrequency[i].letter<< "  "<< ciphertextFrequency[i].frequency<<endl;
+cout<<englishFrequency[i].inputletter<< "  "<< englishFrequency[i].inputfrequency<<endl;
 }
 
 	
@@ -264,21 +266,22 @@ cout<<ciphertextFrequency[i].letter<< "  "<< ciphertextFrequency[i].frequency<<e
      for(int i=0; i<24; i++){
               
                                      
-     if(ciphertextFrequency[i].frequency < ciphertextFrequency[i+1].frequency){
+     if(englishFrequency[i].inputfrequency < englishFrequency[i+1].inputfrequency){
              
-			 tempn = ciphertextFrequency[i].frequency;
-			 ciphertextFrequency[i].frequency = ciphertextFrequency[i+1].frequency;
-             ciphertextFrequency[i+1].frequency = tempn;
+			 tempn = englishFrequency[i].inputfrequency;
+			 englishFrequency[i].inputfrequency = englishFrequency[i+1].inputfrequency;
+             englishFrequency[i+1].inputfrequency = tempn;
              
-             temp = ciphertextFrequency[i].letter;
-             ciphertextFrequency[i].letter = ciphertextFrequency[i+1].letter;
-             ciphertextFrequency[i+1].letter = temp;
+             temp = englishFrequency[i].inputletter;
+             englishFrequency[i].inputletter = englishFrequency[i+1].inputletter;
+             englishFrequency[i+1].inputletter = temp;
              
 }}}
 	
 	for( int i =0 ; i<26 ; i++){
-   cout<<ciphertextFrequency[i].letter<< "  "<< ciphertextFrequency[i].frequency<<endl;
+   cout<<englishFrequency[i].letter<<"  "<<englishFrequency[i].frequency<<" --> "<<englishFrequency[i].inputletter<< "  "<< englishFrequency[i].inputfrequency<<endl;
     }
+
 
 	
 	}
@@ -287,10 +290,12 @@ cout<<ciphertextFrequency[i].letter<< "  "<< ciphertextFrequency[i].frequency<<e
 		
 		char temp;
 		for (int i =0 ; i<strlen(ciphertext) ; i++){
+			
 			for(int j=0 ; j<26 ; j++){
 
-	    if (ciphertext[i] == ciphertextFrequency[j].letter){
+	    if (ciphertext[i] == englishFrequency[j].inputletter){
 			ciphertext[i] = englishFrequency[j].letter;
+			break;
 		}}}
 		cout<<"\n\n"<<ciphertext;
 }
