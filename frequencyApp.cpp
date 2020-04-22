@@ -157,9 +157,6 @@ void addEnglishFrequencyTable(){
  englishFrequency[24].inputletter = 'y';
  englishFrequency[25].inputletter = 'z';	
  
- for (int i =0 ; i<26; i++){
- 	englishFrequency[i].inputfrequency = 0;
- }
  
 }
 
@@ -255,11 +252,6 @@ void sortCipherFrequency(){
 	
 	
 	
-for( int i =0 ; i<26 ; i++){
-cout<<englishFrequency[i].inputletter<< "  "<< englishFrequency[i].inputfrequency<<endl;
-}
-
-	
 	char temp;
 	int tempn;
      for( int s=0; s<25; s++){	
@@ -278,8 +270,11 @@ cout<<englishFrequency[i].inputletter<< "  "<< englishFrequency[i].inputfrequenc
              
 }}}
 	
+	cout<<"\n\n Frequncy alphabet versus input text frequency \n\n";
 	for( int i =0 ; i<26 ; i++){
-   cout<<englishFrequency[i].letter<<"  "<<englishFrequency[i].frequency<<" --> "<<englishFrequency[i].inputletter<< "  "<< englishFrequency[i].inputfrequency<<endl;
+		
+
+   cout<<englishFrequency[i].letter<<"\t"<<englishFrequency[i].frequency<<"\t\t\t"<<englishFrequency[i].inputletter<< "\t"<< englishFrequency[i].inputfrequency<<endl;
     }
 
 
