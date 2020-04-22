@@ -19,8 +19,8 @@ struct frequencyTable{
 
 void addEnglishFrequencyTable();
 void makeCiphertextFrequencyTable(char ciphertext[1000]);
-
-
+void sortCipherFrequency();
+void showOriginalText(char ciphertext[1000]);
 
 int main(){
 
@@ -32,12 +32,15 @@ int main(){
 cout<<"Please enter ciphertext \n\n";
 cin.getline (ciphertext,1000);
 
-makeCiphertextFrequencyTable(ciphertext);
-
-
-for( int i =0 ; i<26 ; i++){
-cout<<ciphertextFrequency[i].letter<< "  "<< ciphertextFrequency[i].frequency<<endl;
+for (int i=0 ; i< strlen(ciphertext) ; i++) {
+	
+	ciphertext[i] = tolower(ciphertext[i]);
 }
+
+
+makeCiphertextFrequencyTable(ciphertext);
+sortCipherFrequency();
+showOriginalText(ciphertext);
 
 return 0;
 }
@@ -244,9 +247,50 @@ void makeCiphertextFrequencyTable(char ciphertext[1000]){
 		}
 		else if (ciphertext[i] == 'z'){
 			ciphertextFrequency[25].frequency++ ;
-		}	
+		}}}
+	
+void sortCipherFrequency(){
+	
+	
+	
+for( int i =0 ; i<26 ; i++){
+cout<<ciphertextFrequency[i].letter<< "  "<< ciphertextFrequency[i].frequency<<endl;
+}
 
+	
+	char temp;
+	int tempn;
+     for( int s=0; s<25; s++){	
+     for(int i=0; i<24; i++){
+              
+                                     
+     if(ciphertextFrequency[i].frequency < ciphertextFrequency[i+1].frequency){
+             
+			 tempn = ciphertextFrequency[i].frequency;
+			 ciphertextFrequency[i].frequency = ciphertextFrequency[i+1].frequency;
+             ciphertextFrequency[i+1].frequency = tempn;
+             
+             temp = ciphertextFrequency[i].letter;
+             ciphertextFrequency[i].letter = ciphertextFrequency[i+1].letter;
+             ciphertextFrequency[i+1].letter = temp;
+             
+}}}
+	
+	for( int i =0 ; i<26 ; i++){
+   cout<<ciphertextFrequency[i].letter<< "  "<< ciphertextFrequency[i].frequency<<endl;
+    }
+
+	
 	}
 	
-	
+	void showOriginalText(char ciphertext[1000]){
+		
+		char temp;
+		for (int i =0 ; i<strlen(ciphertext) ; i++){
+			for(int j=0 ; j<26 ; j++){
+
+	    if (ciphertext[i] == ciphertextFrequency[j].letter){
+			ciphertext[i] = englishFrequency[j].letter;
+		}}}
+		cout<<"\n\n"<<ciphertext;
 }
