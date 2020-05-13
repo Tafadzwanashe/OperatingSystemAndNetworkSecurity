@@ -15,12 +15,19 @@ void method2(int x );
 
 int main(){
 
-int number;
+int number, again=5;
+
+while(again == 5){
+again=0;
+
 cout<<"Please give a number-> ";
 cin>> number;
 tryDivideNumber(number);
 method2(number);
 
+ cout<<"\n\nPress 5 to try again or other numbers to exit: ";
+ cin>>again;
+}
 }
 
 void tryDivideNumber(int number){
@@ -73,21 +80,22 @@ void method1Composite(int number){
 
 void method2(int n ){
 	
-	int i=2,b,x, count;
+	int i=2,b,x, count=0, ans;
 	x = n;
-	b = sqrt(x)	;
-	while(x>1 && i<=b){
-		count++;
-		while((x%i)==0) {
-			cout<<i;
+	b = floor(sqrt(x))	;
+	while((x>1) && (i<=b)){
+
+		while(x/i) {
+		count++;	
+		//	cout<<"i is"<<i;
 			x= x/i;
-			b= sqrt(x);
+			b= floor(sqrt(x));
 		}
 		
 		i = i+1;
 	}
 	if (x>1){
-		cout<<"\n"<<x;
+	//	cout<<"\n"<<x;
 	}
-	
+cout<<"With 2nd method number of iterations is: "<<count<<endl;	
 }
