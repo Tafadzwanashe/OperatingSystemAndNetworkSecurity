@@ -52,10 +52,10 @@ void createList(int numbers[10000], int upperLimit){
 
 void findPrimeNumbers(int numbers[10000], int upperLimit){
 	
-	int p = 0;
+	int p = 0, div;
 	 
 	
-	for(int i=0; i< upperLimit+1; i++){
+	for(int i=0; i< upperLimit; i++){
 		
 		if (numbers[i]==0){
 			break;
@@ -63,14 +63,19 @@ void findPrimeNumbers(int numbers[10000], int upperLimit){
 		
 		p = numbers[i];
 		
-		if( numbers[i]%p == 0){
-			
-	  for(int j = i ; j< upperLimit; j++){
+		cout<<"\n\np is "<< p << " ";
+		
+		for(int k=0; k<upperLimit; k++){
+		
+	 if( ((numbers[k]%p) == 0 ) && (numbers[k] !=p)){
+		
+	  for(int j = k ; j< upperLimit; j++){
 	  	
 		  numbers[j] = numbers[j+1];
 		  
 		}
 	}
+    }
 	}
 	
 }
@@ -80,6 +85,11 @@ void displayPrimeNumbers(int numbers[10000], int upperLimit){
 	cout<<"\n\nThe prime numbers are -> ";
 	
 	for(int i = 0 ; i< upperLimit; i++){
+	  	
+	  	
+	  	if(numbers[i]==0){
+	  		break;
+		  }
 	  	
 		  cout<<numbers[i]<<"_";
 		  
