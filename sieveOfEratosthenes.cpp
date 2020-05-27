@@ -21,7 +21,7 @@ int upperLimit, again=5, numbers[10000];
 while(again == 5){
 again=0;
 
-cout<<"Please enter upper limit number -> ";
+cout<<"Please enter upper limit number (n) -> ";
 cin>> upperLimit;
 createList(numbers, upperLimit);
 findPrimeNumbers(numbers, upperLimit);
@@ -29,6 +29,7 @@ displayPrimeNumbers(numbers, upperLimit);
 
  cout<<"\n\nPress 5 to try again or other numbers to exit: ";
  cin>>again;
+ cout<<"\n\n";
 }
 }
 
@@ -84,7 +85,7 @@ void findPrimeNumbers(int numbers[10000], int upperLimit){
 
 void displayPrimeNumbers(int numbers[10000], int upperLimit){
 	
-	cout<<"\n\nThe prime numbers are -> ";
+	cout<<"The prime numbers are -> ";
 	
 	for(int i = 0 ; i< upperLimit; i++){
 	  	
