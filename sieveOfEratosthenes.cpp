@@ -37,11 +37,14 @@ void createList(int numbers[10000], int upperLimit){
 	//int size = 10000;
 //	size = upperLimit;
 
+	for(int i=0; i< upperLimit; i++){	
+		numbers[i] = 0;
+	}
 	
 	for(int i=0; i< upperLimit; i++){
 		
 		numbers[i] = i+2;
-		cout<< numbers[i] <<"_";
+		//cout<< numbers[i] <<"_";
 		if (numbers[i]== upperLimit){
 			break;
 		}
@@ -63,7 +66,6 @@ void findPrimeNumbers(int numbers[10000], int upperLimit){
 		
 		p = numbers[i];
 		
-		cout<<"\n\np is "<< p << " ";
 		
 		for(int k=0; k<upperLimit; k++){
 		
@@ -87,7 +89,7 @@ void displayPrimeNumbers(int numbers[10000], int upperLimit){
 	for(int i = 0 ; i< upperLimit; i++){
 	  	
 	  	
-	  	if(numbers[i]==0){
+	  	if(numbers[i]==0 || numbers[i]>upperLimit){
 	  		break;
 		  }
 	  	
